@@ -96,7 +96,23 @@
                     <legend>Contact Information</legend>
 
                     <!--Create the Contact Information form here-->
-                    
+                        <p>
+                            <label for="first-name">First Name:</label>
+                            <input type="text" name="first" id="first-name" placeholder="Alice">
+                        </p>
+                        <p>
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" name="last" id="last-name" placeholder="Smith">
+
+                        </p>
+                         <p>
+                            <label for="email-address">Email Address:</label>
+                            <input type="email" name="email" id="email" placeholder="e.g.alice@yahoo.com">
+                        </p>
+                         <p>
+                            <label for="phone-number">Phone Number:</label>
+                            <input type="tel" name="phone" id="phone" placeholder="(555) 555-5555">
+                         </p>
                 </fieldset>
 
                 <fieldset>
@@ -108,17 +124,47 @@
                     <p>Attending Kickoff Breakfast? (Radio Button - Choose One):</p>
                     <p>
                         <!--Complete code here-->
+                        <input type="radio" name="kickoff-breakfast" value="Kickoff Breakfast" id="kickoff-breakfast">
+                        <label for="kickoff-breakfast">Yes, attending Kickoff Breakfast at Old National Events Plaza</label>
                     </p>
+                    <p>
+                        <input type="radio" name="kickoff-breakfast" value="No Breakfast" id="no-breakfast">
+                        <label for="no-breakfast">No, reporting directly to volunteer service site</label>
 
                     <!-- Checkbox Widgets (Multiple Choice) -->
                     <p>Preferred Volunteer Work Types (Checkbox - Choose Multiple):</p>
                     <p>
                         <!--Complete code here-->
+                        <input type="checkbox" name="Landscaping&OutdoorMaintence" value="Landscaping&OutdoorMaintence" id="Landscaping&OutdoorMaintence">
+                        <label for="Landscaping&OutdoorMaintence">Landscaping & Outdoor Maintenance</label>
                     </p>
+                    <p>
+                    <input type="checkbox" name="Painting&Facility Maintenance" value="Painting&FacilityMaintenance" id="Painting&FacilityMaintenance">
+                        <label for="Painting&FacilityMaintenance">Painting & Facility Maintenance</label>
+                    </p>
+                     <p>
+                    <input type="checkbox" name="Cleaning&Reorganization" value="Cleaning&Reorganization" id="Cleaning&Reorganization">
+                        <label for="Cleaning&Reorganization">Cleaning & Reorganization</label>
+                    </p>
+                     <p>
+                    <input type="checkbox" name="Preschool&YouthActivitiesSupport" value="Preschool&YouthActivitiesSupport" id="Preschool&YouthActivitiesSupport">
+                        <label for="Preschool&YouthActivitiesSupport">Preschool & Youth Activities Support</label>
+                    </p>
+
+
 
                     <!-- Select Dropdown Menu -->
                     <p>
                         <!--Complete code here-->
+
+                        <label for="preferred-county">Preferred County:</label>
+
+                        <select name=" Preferred County:"> 
+                            <option value="Vanderburgh County">Vanderburgh County</option>
+                            <option value="Warrick County">Warrick County</option>
+                            <option value="Spencer County">Spencer County</option>
+
+                        </select>
                     </p>
                 </fieldset>
 
@@ -137,6 +183,13 @@
                 <h3>Past News Coverage: Annual Day of Caring </h3>
                 <p>Watch the Eyewitness News WEHT/WTVW report highlighting volunteers during a past Day of Caring event:</p>
                 <!-- Embedd this YouTube video: https://www.youtube.com/watch?v=g0rhgqlObuI here -->
+                 <iframe 
+                 width="460" 
+                 height="250" 
+                 src="https://www.youtube.com/embed/g0rhgqlObuI">
+                 >
+                 </iframe>
+
                 
             </article>
         </section>
