@@ -1,0 +1,1 @@
+window.alert(`Welcome To Our Intramurals Page!`);

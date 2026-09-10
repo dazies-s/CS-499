@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intramurals</title>
+</head>
+<body>
+    <!--Header and navigation container-->
+    <header>
+        <h1>Intramurals</h1>
+        <p>Some Universiy Center Of Fitness</p> <br><br>
+    </header>
+    <nav>
+        <h2> Main Menu</h2>
+        <ul>
+            <li><a href="#about">About The Club</a></li>
+            <li><a href="#schedule">Club Schedule</a></li>
+            <li><a href="#signup">Join the Club</a></li>
+            <li><a href="#media">Club Video</a></li> <br><br><br><br><br>
+        </ul>
+    </nav>
+<!-- Main Container -->
+    <main>
+
+        <!-- About Section-->
+
+        <section id="about">
+            <h4>About The Club:</h4>
+            <article>
+                We focus on having casual fun, fitness, and community by playing your favorite sports.
+                <br> <br>
+                <b>Make new friends by particpating in:
+                <ul>
+                    <li type="1">Soccer</li>
+                    <li type="1">Pickleball</li>
+                    <li type="1">Basketball</li>
+                    <li type="1">Volleyball</li> </b>
+                </ul>
+            </article>
+        </section>
+
+
+        <!-- The Clubs' Schedule On A Table-->
+        <section id="schedule">
+            <h2>Our Intramural Schedule</h2>
+            <p>Review the date and times below:<p>
+                <table border="5">
+                    <caption> Playing Time and Dates</caption>
+                    <tr>
+                        <th> <b> </b> </th>
+                        <th><b>Sport</b></th>
+                        <th><b>Tuesday</b></th>
+                        <th><b>Thursday</b></th>
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 1</b></th>
+                        <td rowspan="2">Soccer</td>
+                        <td><b>5:00pm - 7:00pm</b></td>
+                        <td><b>6:00pm - 8:00pm</b></td>
+                        
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 2</b></th>
+                         <td><b>5:00pm - 7:00pm</b></td>
+                        <td><b>6:00pm - 8:00pm</b></td>
+                        
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 3</b></th>
+                        <td> Pickleball</td>
+                         <td><b>5:00pm - 7:00pm</b></td>
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 4</b></th>
+                        <td colspan="3" rowspan = "2" style="color: #FF0000"><center> CANCELED </center></td>
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 5</b></th>
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 6</b></th>
+                        <td>Basketball</td>
+                        <td rowspan = "2"><b>4:00pm - 8:00pm</b></td>
+                        <td rowspan = "2"><b>5:30pm - 9:30pm</b></td>
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 7</b></th>
+                        <td>Volleyball</td>
+                    </tr>
+                    
+                </table>
+        </section>
+
+
+        <!--Club Signups-->
+        <section id="signup">
+
+            <h2> Intramurals Signup Form </h2>
+            <form action="https://example.com/apply" method="POST">
+                
+                <!--contact information-->
+                <fieldset>
+                    <legend>Personal Contact Information</legend>
+                        <p>
+                            <label for="first-name">First Name:</label>
+                            <input type="text" name="first" id="first-name" placeholder="Alice">
+                        </p>
+                        <p>
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" name="last" id="last-name" placeholder="Smith">
+
+                        </p>
+                         <p>
+                            <label for="email-address">Email Address:</label>
+                            <input type="email" name="email" id="email" placeholder="e.g.alice@ville.edu">
+                        </p>
+                        <p>
+                            <label for="student-id">Student ID:</label>
+                            <input type="digit" name="ID" id="ID" placeholder="e.g. 418211"
+                        </p>
+                         <p>
+                            <label for="phone-number">Phone Number:</label>
+                            <input type="tel" name="phone" id="phone" placeholder="(555) 555-5555"> <br> <br>
+                         </p>
+                </fieldset>
+                
+                <!--Accademic Details-->
+                <fieldset>
+                    <legend>Academic Details</legend>
+                    <p>
+                        <label for="year">Grade Level:</label>
+                        <input type="text" name="year" id="year" placeholder="e.g. freshman, senior">
+                    </p>
+                    <p>
+                        <label for="major">Major:</label>
+                        <input type="text" name="major" id="major" placeholder="e.g. Accounting, Biology">
+                    </p>
+                    <p>Housing Status:</p>
+                    <p>
+                        <input type="radio" name="status" value="OnCampus" id="OnCampus">
+                        <value for="OnCampus">On Campus</value>
+                    </p>
+                     <p>
+                        <input type="radio" name="status" value="offnCampus" id="OffCampus">
+                        <value for="OffCampus">Off Campus</value>
+                    </p>
+
+                </fieldset>
+
+                <!--Availiablity-->
+                <fieldset>
+                    <legend>Availablity</legend>
+                    <table border="5">
+                    <caption> Checkmark The Following Boxes If Available<br> - <br> Leave Blank When Not Availiable:</caption>
+                    <tr>
+                        <th> <b> </b> </th>
+                        <th><b>Sport</b></th>
+                        <th><b>Tuesday</b></th>
+                        <th><b>Thursday</b></th>
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 1</b></th>
+                        <td rowspan="2">Soccer</td> <br>
+                        <td><b>5:00pm - 7:00pm
+                            <input type="checkbox" value="week1tuesday" id="week1tuesday">
+                            <label for="week1tuesday"></label>
+                        </b></td>
+                        <td><b>6:00pm - 8:00pm
+                            <input type="checkbox" value="week1thursday" id="week1thursday">
+                            <label for="week1thursday"></label>
+                        </b></td>
+                        
+                        
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 2</b></th>
+                         <td><b>5:00pm - 7:00pm
+                            <input type="checkbox" value="week2tuesday" id="week2tuesday">
+                            <label for="week2tuesday"></label>
+                         </b></td>
+                        <td><b>6:00pm - 8:00pm
+                            <input type="checkbox" value="week2thursday" id="week2thursday">
+                            <label for="week2thursday"></label>
+                        </b></td>
+                        
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 3</b></th>
+                        <td> Pickleball</td>
+                         <td><b> 5:00pm - 7:00pm
+                            <input type="checkbox" value="week3tues" id="week3tues">
+                            <label for="week3tues"></label>
+                         </b></td>
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 4</b></th>
+                        <td colspan="3" rowspan = "2" style="color: #FF0000"><center> CANCELED </center></td>
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 5</b></th>
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 6</b></th>
+                        <td>Basketball</td>
+                        <td rowspan = "2" ><b>4:00pm - 8:00pm
+                            <input type="checkbox" value="weeks67tues" id="weeks67tues">
+                            <label for="weeks6tues7"></label>
+                        </b></td>
+                        <td rowspan = "2" ><b>5:30pm - 9:30pm
+                            <input type="checkbox" value="weeks67thurs" id="weeks67thurs">
+                            <label for="weeks67thurs"></label>
+                        </b></td>
+                    </tr>
+
+                    <tr>
+                        <th><b>Week 7</b></th>
+                        <td>Volleyball</td>
+                        
+                    </tr>
+                    
+                </table>
+                </fieldset>
+
+                <!--Form Submission-->
+                <p>
+                <button type="submit">Submit Intramural Signup Form</button>
+                </p>
+                <br><br><br>
+            </form>
+
+
+
+        </section>
+        <!--Club Video-->
+        <section id="media">
+            <h2>More Info About Intramurals</h2>
+            <!--https://www.youtube.com/watch?v=Sr5LticSTck-->
+             <iframe 
+                 width="460" 
+                 height="250" 
+                 src="https://www.youtube.com/watch?v=Sr5LticSTck">
+                 >
+                 </iframe>
+        </section>
+
+     </main>
+
+     
+
+     <!--Script-->
+     <script src="index.js"></script>
+
+
+
+</body>
+</html>
