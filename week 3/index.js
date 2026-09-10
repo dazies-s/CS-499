@@ -1,0 +1,1 @@
+window.alert(`Welcome to United Way of Southwestern Indiana!`);
