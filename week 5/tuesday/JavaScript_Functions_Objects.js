@@ -40,14 +40,14 @@ const triple = x => x *3;
 
 //TODO 
 
-const bankAccount = {
+/* const bankAccount = {
    holder: "Alex",
    balance: "500", 
    get formattedBalance() {
      return this.holder + "$"+ "balance";
    },
    set deposit(value)
-}
+} */
 
 // 2.2 Plain Objects as Maps vs. Map Object
 // let inventory = {
@@ -66,7 +66,7 @@ const bankAccount = {
 // ==========================================================================
 
 // 3.1 String Object Manipulation
-let rawProductCode = "   sku-98765-electronics   ";
+// let rawProductCode = "   sku-98765-electronics   ";
 
 //TODO
 
