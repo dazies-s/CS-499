@@ -16,28 +16,28 @@ import { verifyUser, getCart, calculateTotal, chargeCard } from "./shop/checkout
    ============================================================================= */
 
 // // 1.2 
-function calculate() {
-  const cart = [
-    { name: "Running shoes", price: 59.99, qty: 1 },
-    { name: "Water bottle", price: 12.5, qty: 2 },
-  ];
+// function calculate() {
+//   const cart = [
+//     { name: "Running shoes", price: 59.99, qty: 1 },
+//     { name: "Water bottle", price: 12.5, qty: 2 },
+//   ];
 
-  const subtotal = calculateSubtotal(cart);
-  const tax = calculateTax(subtotal);
+//   const subtotal = calculateSubtotal(cart);
+//   const tax = calculateTax(subtotal);
 
-  console.log("Subtotal:      ", formatPrice(subtotal));
-  console.log("Tax:           ", formatPrice(tax));
-  console.log("Total:         ", formatPrice(subtotal + tax));
-  console.log("10% off subtotal:", formatPrice(applyDiscount(subtotal, 10)));
-}
+//   console.log("Subtotal:      ", formatPrice(subtotal));
+//   console.log("Tax:           ", formatPrice(tax));
+//   console.log("Total:         ", formatPrice(subtotal + tax));
+//   console.log("10% off subtotal:", formatPrice(applyDiscount(subtotal, 10)));
+// }
 
 // calculate(); 
 
 // 1.3
-// function outputPrice() {
-//   console.log("Exports from price.js:", Object.keys(price));
-//   console.log("price.round2 is:", price.round2);
-// }
+function outputPrice() {
+  console.log("Exports from price.js:", Object.keys(price));
+  console.log("price.round2 is:", price.round2);
+}
 
 // outputPrice(); 
 
