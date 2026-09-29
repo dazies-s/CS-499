@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+
+    <style>
+    body { font-family: sans-serif; max-width: 500px; margin: 40px auto; }
+    .highlight { color: blue; }
+    .invalid { border: 2px solid red; }
+    #errorMsg { color: red; }
+  </style>
+
+</head>
+<body>
+    <h1 id="title">Feedback Form</h1>
+
+    <hr/>
+
+    <form id="feedbackForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br><br>
+        
+        <label for="rating">Rating (1-5):</label>
+        <input type="number" id="rating" min="1" max="5" required>
+        <br><br>
+        
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments"></textarea>
+        <p id="charCount">Characters: 0</p>
+        
+        <p id="errorMessage" class="error"></p>
+        <button type="submit">Submit</button>
+</form>
+
+<h2>Submissions</h2>
+<hr/> 
+<ul id="submissionList"></ul>
+    <script>
+    const form = document.querySelector("#feedbackForm");
+    const comments = document.querySelector("#comments");
+    const charCount = document.querySelector("#charCount");
+    const rating = document.querySelector("#rating");
+    const errorMessage = document.querySelector("#errorMessage");
+    const submissionList = document.querySelector("#submissionList");
+    const email = document.querySelector("#email");
+    
+    // Live character counter
+    comments.addEventListener("input", function () {
+        charCount.textContent = "Characters: " + comments.value.length;
+    });
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        errorMessage.textContent = "";
+        rating.classList.remove("invalid");
+        const ratingValue = Number(rating.value);
+        // JavaScript validation
+        if (ratingValue < 1 || ratingValue > 5) {
+            errorMessage.textContent = "Rating must be between 1 and 5.";
+            
+            rating.classList.add("invalid");
+            return;}
+            // Create new list item
+            const li = document.createElement("li");
+            li.textContent =
+            document.querySelector("#name").value +
+            " rated " + ratingValue +"/5: " + comments.value + " ";
+
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "X";
+
+            li.appendChild(deleteButton);
+
+            submissionList.appendChild(li);
+            
+            form.reset();
+            charCount.textContent = "Characters: 0";
+        });
+        
+        // Event delegation for delete buttons
+        submissionList.addEventListener("click", function (event) {
+            if (event.target.tagName === "BUTTON") {
+                event.target.parentNode.remove();
+            }
+        });
+
+    </script>
+    
+</body>
+</html>
