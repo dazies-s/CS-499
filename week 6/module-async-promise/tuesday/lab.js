@@ -33,13 +33,13 @@ import { verifyUser, getCart, calculateTotal, chargeCard } from "./shop/checkout
 
 // calculate(); 
 
-// 1.3
-function outputPrice() {
-  console.log("Exports from price.js:", Object.keys(price));
-  console.log("price.round2 is:", price.round2);
-}
+// // // 1.3
+// function outputPrice() {
+//   console.log("Exports from price.js:", Object.keys(price));
+//   console.log("price.round2 is:", price.round2);
+// }
 
-// outputPrice(); 
+// // outputPrice(); 
 
 // 1.4 
 // function defaultExport() {
@@ -47,13 +47,13 @@ function outputPrice() {
 //   console.log("salesTax(100) =", salesTax(100));
 // }
 
-// defaultExport();
+// // defaultExport();
 
 /* =============================================================================
    PART 2 -- Asynchronous Programming 
    ============================================================================= */
 
-// 2.1 
+// // 2.1 
 // function outputOrder() {
 //   console.log("1. Order placed");
 
@@ -66,7 +66,7 @@ function outputPrice() {
 
 // outputOrder();
 
-// 2.2 
+// // 2.2 
 // function timerOutput() {
 //   console.log("Before");
 //   setTimeout(() => console.log("Timer with 0 ms delay"), 0);
@@ -79,7 +79,7 @@ function outputPrice() {
    PART 3 -- Promises                                  
    ============================================================================= */
 
-// 3.1 
+// // 3.1 
 // function rejectOutput() {
 //   const request = checkStock("backpack", 1);
 
@@ -92,10 +92,18 @@ function outputPrice() {
 
 // rejectOutput();
 
-// 3.2
+// // 3.2
 // function validatePromoCode(code) {
 //   // ===== TODO: replace the next line with your promise =====
-//   throw new Error("TODO: write validatePromoCode()");
+//   return new Promise((resolve, reject) => {
+//    let number = 10;
+//    if( number %10 === 0){
+//       resolve ("SAVE10");
+//    } else {
+//       rejects ("<code>")
+
+//    }
+//   }, 500);
 // }
 
 // function promoOutput() {
@@ -125,9 +133,9 @@ function outputPrice() {
 //   console.log("(This line is written AFTER the promise code)");
 // }
 
-// checkItem("sneakers",2);
+// checkItem("skateboard",1);
 
-// 4.2
+// // 4.2
 // function errorOutput() {
 //   checkStock("sneakers", 1)
 //     .then((message) => {
@@ -146,30 +154,30 @@ function outputPrice() {
    ============================================================================= */
 
 // 5.1 
-// function checkoutFlow(email) {
-//   verifyUser(email)
-//     .then(getCart)
-//     .then(calculateTotal)
-//     .then(chargeCard)
-//     .then((receipt) => console.log("RECEIPT:", receipt))
-//     .catch((error) => console.log("CHECKOUT FAILED:", error))
-//     .finally(() => console.log("Checkout finished"));
-// }
+function checkoutFlow(email) {
+  verifyUser(email)
+    .then(getCart)
+    .then(calculateTotal)
+    .then(chargeCard)
+    .then((receipt) => console.log("RECEIPT:", receipt))
+    .catch((error) => console.log("CHECKOUT FAILED:", error))
+    .finally(() => console.log("Checkout finished"));
+}
 
-// checkoutFlow("jordan@example.com"); 
+checkoutFlow("jordan@example.com"); 
 
 // 5.2 
 
-// function bug() {
-//   verifyUser("jordan@example.com")
-//     .then((user) => {
-//       getCart(user); // <-- BUG: something is missing on this line
-//     })
-//     .then((cart) => {
-//       console.log("Cart received:", cart);
-//     })
-//     .catch((error) => console.log("CHECKOUT FAILED:", error));
-// }
+function bug() {
+  verifyUser("jordan@example.com")
+    .then((user) => {
+      return getCart(user); // <-- BUG: something is missing on this line
+    })
+    .then((cart) => {
+      console.log("Cart received:", cart);
+    })
+    .catch((error) => console.log("CHECKOUT FAILED:", error));
+}
 
-// bug();
+bug();
 
