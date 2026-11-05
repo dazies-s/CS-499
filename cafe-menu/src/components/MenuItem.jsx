@@ -1,21 +1,12 @@
-import { useState } from "react";
 export default function MenuItem({
     name,
     description,
     price,
-    available
+    available,
+    count,
+    onAdd,
+    onRemove
 }) {
-
-    const [count, setCount] = useState(0);
-
-    function handleAddClick() {
-        setCount(count + 1);
-    }
-
-    function handleRemoveClick() {
-        setCount(count - 1);
-    }
-
     return (
         <div className="menu-item">
             <h3>{name}</h3>
@@ -33,7 +24,7 @@ export default function MenuItem({
             )}
 
             {available ? (
-                <button onClick={handleAddClick}>
+                <button onClick={onAdd}>
                     Add to Order
                 </button>
             ) : (
@@ -43,7 +34,7 @@ export default function MenuItem({
             )}
 
             {count > 0 && (
-                <button onClick={handleRemoveClick}>
+                <button onClick={onRemove}>
                     Remove
                 </button>
             )}
