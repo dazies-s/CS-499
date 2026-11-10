@@ -2,6 +2,7 @@ import { useState } from "react";
 import MenuItem from "./components/MenuItem";
 import Footer from "./components/Footer";
 import OrderForm from "./components/OrderForm";
+import CafeInspiration from "./components/CafeInspiration";
 import { menu } from "./data";
 
 export default function App() {
@@ -59,12 +60,12 @@ export default function App() {
         />
       ))}
 
-      {/* Pass totalItems and onPlaceOrder props to OrderForm */}
-      <OrderForm 
-        totalItems={totalItems} 
-        onPlaceOrder={placeOrder} 
+      
+      <OrderForm
+        totalItems={totalItems}
+        onPlaceOrder={placeOrder}
       />
-
+      < CafeInspiration />
       <Footer />
     </div>
   );
